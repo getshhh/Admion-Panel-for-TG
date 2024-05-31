@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Admin Panel
+{% endblock %}
+
+{% block body %}
+<div class="main">
+    <h1>Admin panel</h1>
+</div>
+
+<p>
+  <span class="input">
+    <input id="userID" type="text" placeholder="Введите ID пользователя">
+    <span></span> 
+  </span>
+</p>
+
+<div class="container">
+  <button id="button" onclick="checkInput()">Готово</button>
+</div>
+
+<script>
+  function checkInput() {
+    var userID = document.getElementById('userID').value;
+    if (!userID) {
+      alert('Введите ID');
+    } else {
+      window.location.href = '/batton';
+    }
+  }
+</script>
+{% endblock %}
