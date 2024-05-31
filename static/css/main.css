@@ -1,0 +1,141 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(30, 1, 66);
+}
+
+.main h1 {
+  color: white;
+  font-family: "Poppins";
+  text-align: center;
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input {
+  position: relative;
+  font-size: 2em;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 9999em;
+  *:not(span) {
+    position: relative;
+    display: inherit;
+    border-radius: inherit;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0 .5em;
+    z-index: 1;
+    &:focus + span {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  span {
+    transform: scale(.993, .94);
+    transition: transform .5s, opacity .25s;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+    margin: 5px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0 4px #fff,
+      0 0 0 5px #fff,
+      3px -3px 30px #1beabd,
+      -3px 3px 30px #10abff;
+  }
+}
+
+input {
+  font-family: inherit;
+  line-height: inherit;
+  color: #2e3750;
+  min-width: 20em;
+}
+
+::placeholder {
+  color: #9a0feb;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  outline: none;
+  height: 50px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #34C759;
+  color: #34C759;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  color: #fff;
+  background: #34C759;
+}
+
+button:active {
+  letter-spacing: 2px;
+}
+
+.onclic {
+  width: 40px;
+  border-color: #666;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #34C759;
+  animation: rotating 2s 0.25s linear infinite;
+}
+
+.onclic:after {
+  content: "";
+}
+
+.onclic:hover {
+  color: #34C759;
+  background: #fff;
+}
+
+.validate {
+  font-size: 13px;
+  color: #fff;
+  background: #34C759;
+}
+
+.validate:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
