@@ -8,7 +8,7 @@ from aiogram.utils.markdown import text
 from aiohttp import web
 
 # Регистрация бота
-API_TOKEN = '7157511391:AAHQbTZ348ECQ-qxOU8HRbVWhH1c9vtW3eg'
+API_TOKEN = 'TOKEN'
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
